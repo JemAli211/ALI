@@ -1,0 +1,9 @@
+<h1>Edit Agence</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.local) }}
+<button type="submit">Save Changes</button>
+{{ form_end(form) }}
+
+<a href="{{ path('annonce_list') }}">Back to List</a>

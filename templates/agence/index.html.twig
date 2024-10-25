@@ -1,0 +1,26 @@
+<h1>Agence List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for agence in agences %}
+        <tr>
+            <td>{{ agence.id }}</td>
+            <td>{{ agence.name }}</td>
+            <td>{{ agence.local }}</td>
+            <td>
+                <a href="{{ path('agence_edit', {id: agence.id}) }}">Edit</a>
+                <a href="{{ path('agence_delete', {id: agence.id}) }}">Delete</a>
+
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

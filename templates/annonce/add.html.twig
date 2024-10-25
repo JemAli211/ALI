@@ -1,0 +1,13 @@
+{% extends '../base.html.twig' %}
+
+{% block title %}Add New Agence{% endblock %}
+
+{% block body %}
+    <h1>Add a New Agence</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.local) }}
+    <button type="submit" class="btn btn-success">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

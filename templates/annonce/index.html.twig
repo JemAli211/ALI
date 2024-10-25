@@ -1,0 +1,29 @@
+<h1>Agence List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>publication</th>
+        <th>Anblike</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for agence in agences %}
+        <tr>
+            <td>{{ agence.id }}</td>
+            <td>{{ agence.title }}</td>
+            <td>{{ agence.publication }}</td>
+            <td>{{ agence.nblike }}</td>
+            <td>
+                <a href="{{ path('agence_edit', {id: agence.id}) }}">Edit</a>
+                <a href="{{ path('agence_delete', {id: agence.id}) }}">Delete</a>
+
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h1>this table contains {{ annonce|length }}
+    annonce and {{ total_annonce }} books</h1>
